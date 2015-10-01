@@ -1,0 +1,21 @@
+{
+  "generator-jhipster": {
+    "baseName": "stockAnalyzer",
+    "packageName": "com.ichoice.stockanalyzer",
+    "packageFolder": "com/ichoice/stockanalyzer",
+    "authenticationType": "xauth",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "no",
+    "useSass": true,
+    "buildTool": "maven",
+    "frontendBuilder": "gulp",
+    "javaVersion": "8",
+    "enableTranslation": true,
+    "rememberMeKey": "bda4f578121eca47ae7d35b4034ce6098c74e54b"
+  }
+}
