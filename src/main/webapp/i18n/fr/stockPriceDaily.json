@@ -1,0 +1,26 @@
+{
+    "stockanalyzerApp": {
+        "stockPriceDaily" : {
+            "home": {
+                "title": "StockPriceDailys",
+                "createLabel": "Créer un nouveau StockPriceDaily",
+                "createOrEditLabel": "Créer ou éditer un StockPriceDaily"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le StockPriceDaily {{ id }} ?"
+            },
+            "detail": {
+                "title": "StockPriceDaily"
+            },
+            "day": "Day",
+            "open": "Open",
+            "close": "Close",
+            "high": "High",
+            "low": "Low",
+            "volume": "Volume",
+            "adjustedClose": "AdjustedClose",
+            "stockInfo": "StockInfo"
+        }
+    }
+}
+

@@ -1,0 +1,110 @@
+
+<div>
+    <h2><span translate="stockanalyzerApp.stockPriceWeekly.detail.title">StockPriceWeekly</span> {{stockPriceWeekly.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockPriceWeekly.day">Day</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockPriceWeekly.day}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockPriceWeekly.week">Week</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockPriceWeekly.week}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockPriceWeekly.year">Year</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockPriceWeekly.year}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockPriceWeekly.open">Open</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockPriceWeekly.open}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockPriceWeekly.close">Close</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockPriceWeekly.close}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockPriceWeekly.high">High</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockPriceWeekly.high}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockPriceWeekly.low">Low</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockPriceWeekly.low}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockPriceWeekly.totalVolume">TotalVolume</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockPriceWeekly.totalVolume}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockPriceWeekly.adjustedClose">AdjustedClose</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockPriceWeekly.adjustedClose}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockPriceWeekly.priceChange">PriceChange</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockPriceWeekly.priceChange}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockPriceWeekly.stockInfo">stockInfo</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="stockInfo.detail({id:stockPriceWeekly.stockInfoId})">{{stockPriceWeekly.stockInfoTicker}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

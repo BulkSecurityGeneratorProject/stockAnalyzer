@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="stockanalyzerApp.stockInfo.detail.title">StockInfo</span> {{stockInfo.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockInfo.ticker">Ticker</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockInfo.ticker}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockInfo.companyName">CompanyName</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockInfo.companyName}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockInfo.stockExchange">stockExchange</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="stockExchange.detail({id:stockInfo.stockExchangeId})">{{stockInfo.stockExchangeName}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockInfo.stockCategory">stockCategory</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="stockCategory.detail({id:stockInfo.stockCategoryId})">{{stockInfo.stockCategoryName}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

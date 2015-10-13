@@ -1,0 +1,22 @@
+{
+    "stockanalyzerApp": {
+        "stockInfo" : {
+            "home": {
+                "title": "StockInfos",
+                "createLabel": "Créer un nouveau StockInfo",
+                "createOrEditLabel": "Créer ou éditer un StockInfo"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le StockInfo {{ id }} ?"
+            },
+            "detail": {
+                "title": "StockInfo"
+            },
+            "ticker": "Ticker",
+            "companyName": "CompanyName",
+            "stockExchange": "StockExchange",
+            "stockCategory": "StockCategory"
+        }
+    }
+}
+

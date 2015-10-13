@@ -1,0 +1,19 @@
+{
+    "stockanalyzerApp": {
+        "stockCategory" : {
+            "home": {
+                "title": "StockCategorys",
+                "createLabel": "Créer un nouveau StockCategory",
+                "createOrEditLabel": "Créer ou éditer un StockCategory"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le StockCategory {{ id }} ?"
+            },
+            "detail": {
+                "title": "StockCategory"
+            },
+            "name": "Name"
+        }
+    }
+}
+

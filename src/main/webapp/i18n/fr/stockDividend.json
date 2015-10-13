@@ -1,0 +1,22 @@
+{
+    "stockanalyzerApp": {
+        "stockDividend" : {
+            "home": {
+                "title": "StockDividends",
+                "createLabel": "Créer un nouveau StockDividend",
+                "createOrEditLabel": "Créer ou éditer un StockDividend"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le StockDividend {{ id }} ?"
+            },
+            "detail": {
+                "title": "StockDividend"
+            },
+            "day": "Day",
+            "amount": "Amount",
+            "stockInfo": "StockInfo",
+            "stockPrice": "StockPrice"
+        }
+    }
+}
+

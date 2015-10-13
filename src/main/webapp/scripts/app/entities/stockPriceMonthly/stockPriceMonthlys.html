@@ -1,0 +1,108 @@
+<div>
+    <h2 translate="stockanalyzerApp.stockPriceMonthly.home.title">StockPriceMonthlys</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="stockPriceMonthly.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="stockanalyzerApp.stockPriceMonthly.home.createLabel">Create a new StockPriceMonthly</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteStockPriceMonthlyConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(stockPriceMonthly.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="stockanalyzerApp.stockPriceMonthly.delete.question" translate-values="{id: '{{stockPriceMonthly.id}}'}">Are you sure you want to delete this StockPriceMonthly?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="global.field.id">ID</th>
+                    <th translate="stockanalyzerApp.stockPriceMonthly.day">Day</th>
+                    <th translate="stockanalyzerApp.stockPriceMonthly.month">Month</th>
+                    <th translate="stockanalyzerApp.stockPriceMonthly.year">Year</th>
+                    <th translate="stockanalyzerApp.stockPriceMonthly.open">Open</th>
+                    <th translate="stockanalyzerApp.stockPriceMonthly.close">Close</th>
+                    <th translate="stockanalyzerApp.stockPriceMonthly.high">High</th>
+                    <th translate="stockanalyzerApp.stockPriceMonthly.low">Low</th>
+                    <th translate="stockanalyzerApp.stockPriceMonthly.totalVolume">TotalVolume</th>
+                    <th translate="stockanalyzerApp.stockPriceMonthly.adjustedClose">AdjustedClose</th>
+                    <th translate="stockanalyzerApp.stockPriceMonthly.priceChange">PriceChange</th>
+                    <th translate="stockanalyzerApp.stockPriceMonthly.stockInfo">stockInfo</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="stockPriceMonthly in stockPriceMonthlys">
+                    <td><a ui-sref="stockPriceMonthly.detail({id:stockPriceMonthly.id})">{{stockPriceMonthly.id}}</a></td>
+                    <td>{{stockPriceMonthly.day}}</td>
+                    <td>{{stockPriceMonthly.month}}</td>
+                    <td>{{stockPriceMonthly.year}}</td>
+                    <td>{{stockPriceMonthly.open}}</td>
+                    <td>{{stockPriceMonthly.close}}</td>
+                    <td>{{stockPriceMonthly.high}}</td>
+                    <td>{{stockPriceMonthly.low}}</td>
+                    <td>{{stockPriceMonthly.totalVolume}}</td>
+                    <td>{{stockPriceMonthly.adjustedClose}}</td>
+                    <td>{{stockPriceMonthly.priceChange}}</td>
+                    <td>
+                        <a ui-sref="stockInfo.detail({id:stockPriceMonthly.stockInfoId})">{{stockPriceMonthly.stockInfoTicker}}</a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="stockPriceMonthly.detail({id:stockPriceMonthly.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="stockPriceMonthly.edit({id:stockPriceMonthly.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(stockPriceMonthly.id)"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pagination">
+                <li ng-show="links['first'] >= 0" ng-click="loadPage(links['first'])"><a>&lt;&lt;</a></li>
+                <li ng-show="page > 0" ng-click="loadPage(links['prev'] || 0)"><a>&lt;</a></li>
+                <li ng-show="page > 1" ng-click="loadPage(page - 2)"><a>{{page - 1}}</a></li>
+                <li ng-show="page > 0" ng-click="loadPage(page - 1)"><a>{{page}}</a></li>
+                <li class="active"><a>{{page + 1}}</a></li>
+                <li ng-show="page < links['last']" ng-click="loadPage(page + 1)"><a>{{page + 2}}</a></li>
+                <li ng-show="page < links['last'] - 1" ng-click="loadPage(page + 2)"><a>{{page + 3}}</a></li>
+                <li ng-show="links['next']" ng-click="loadPage(links['next'])"><a>&gt;</a></li>
+                <li ng-show="links['last'] > 0" ng-click="loadPage(links['last'])"><a>&gt;&gt;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

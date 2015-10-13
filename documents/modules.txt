@@ -1,0 +1,27 @@
+1) stocks base
+    * stock_info
+    * stock_background
+
+2) stock price
+    * stock_price_detailed
+    * stock_price_daily
+
+3) stock analysis
+
+
+4) users
+    * jhi_user
+    * jhi_authority
+    * jhi_user_authority
+
+5) user goal
+    * user_goal
+
+6) user stock
+    * user_stock
+
+7) stock events
+    * stock_news
+    * stock_dividend
+    * stock_split
+

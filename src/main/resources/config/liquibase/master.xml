@@ -5,5 +5,13 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
     <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151012224307_added_entity_StockExchange.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151012224348_added_entity_StockCategory.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151012224642_added_entity_StockInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151012225414_added_entity_StockPriceDaily.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151012245414_added_entity_StockPriceWeekly.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151012285414_added_entity_StockPriceMonthly.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151013014146_added_entity_StockDividend.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20151013114146_added_entity_StockSplit.xml" relativeToChangelogFile="false"/>
     <!-- JHipster will add liquibase changelogs here -->
 </databaseChangeLog>

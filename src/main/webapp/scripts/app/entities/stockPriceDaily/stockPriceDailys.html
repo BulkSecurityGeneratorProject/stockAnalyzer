@@ -1,0 +1,102 @@
+<div>
+    <h2 translate="stockanalyzerApp.stockPriceDaily.home.title">StockPriceDailys</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="stockPriceDaily.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="stockanalyzerApp.stockPriceDaily.home.createLabel">Create a new StockPriceDaily</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteStockPriceDailyConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(stockPriceDaily.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="stockanalyzerApp.stockPriceDaily.delete.question" translate-values="{id: '{{stockPriceDaily.id}}'}">Are you sure you want to delete this StockPriceDaily?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="global.field.id">ID</th>
+                    <th translate="stockanalyzerApp.stockPriceDaily.day">Day</th>
+                    <th translate="stockanalyzerApp.stockPriceDaily.open">Open</th>
+                    <th translate="stockanalyzerApp.stockPriceDaily.close">Close</th>
+                    <th translate="stockanalyzerApp.stockPriceDaily.high">High</th>
+                    <th translate="stockanalyzerApp.stockPriceDaily.low">Low</th>
+                    <th translate="stockanalyzerApp.stockPriceDaily.volume">Volume</th>
+                    <th translate="stockanalyzerApp.stockPriceDaily.adjustedClose">AdjustedClose</th>
+                    <th translate="stockanalyzerApp.stockPriceDaily.stockInfo">stockInfo</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="stockPriceDaily in stockPriceDailys">
+                    <td><a ui-sref="stockPriceDaily.detail({id:stockPriceDaily.id})">{{stockPriceDaily.id}}</a></td>
+                    <td>{{stockPriceDaily.day}}</td>
+                    <td>{{stockPriceDaily.open}}</td>
+                    <td>{{stockPriceDaily.close}}</td>
+                    <td>{{stockPriceDaily.high}}</td>
+                    <td>{{stockPriceDaily.low}}</td>
+                    <td>{{stockPriceDaily.volume}}</td>
+                    <td>{{stockPriceDaily.adjustedClose}}</td>
+                    <td>
+                        <a ui-sref="stockInfo.detail({id:stockPriceDaily.stockInfoId})">{{stockPriceDaily.stockInfoTicker}}</a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="stockPriceDaily.detail({id:stockPriceDaily.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="stockPriceDaily.edit({id:stockPriceDaily.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(stockPriceDaily.id)"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pagination">
+                <li ng-show="links['first'] >= 0" ng-click="loadPage(links['first'])"><a>&lt;&lt;</a></li>
+                <li ng-show="page > 0" ng-click="loadPage(links['prev'] || 0)"><a>&lt;</a></li>
+                <li ng-show="page > 1" ng-click="loadPage(page - 2)"><a>{{page - 1}}</a></li>
+                <li ng-show="page > 0" ng-click="loadPage(page - 1)"><a>{{page}}</a></li>
+                <li class="active"><a>{{page + 1}}</a></li>
+                <li ng-show="page < links['last']" ng-click="loadPage(page + 1)"><a>{{page + 2}}</a></li>
+                <li ng-show="page < links['last'] - 1" ng-click="loadPage(page + 2)"><a>{{page + 3}}</a></li>
+                <li ng-show="links['next']" ng-click="loadPage(links['next'])"><a>&gt;</a></li>
+                <li ng-show="links['last'] > 0" ng-click="loadPage(links['last'])"><a>&gt;&gt;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

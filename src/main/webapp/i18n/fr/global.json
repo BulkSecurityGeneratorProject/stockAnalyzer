@@ -6,6 +6,14 @@
             "home": "Accueil",
             "entities": {
                 "main": "Entités",
+                "stockExchange": "StockExchange",
+                "stockCategory": "StockCategory",
+                "stockInfo": "StockInfo",
+                "stockPriceDaily": "StockPriceDaily",
+                "stockPriceWeekly": "StockPriceWeekly",
+                "stockPriceMonthly": "StockPriceMonthly",
+                "stockDividend": "StockDividend",
+                "stockSplit": "StockSplit",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

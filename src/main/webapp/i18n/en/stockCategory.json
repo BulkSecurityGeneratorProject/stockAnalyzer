@@ -1,0 +1,21 @@
+{
+    "stockanalyzerApp": {
+        "stockCategory" : {
+            "home": {
+                "title": "StockCategorys",
+                "createLabel": "Create a new StockCategory",
+                "createOrEditLabel": "Create or edit a StockCategory"
+            },
+            "created": "A new StockCategory is created with identifier {{ param }}",
+            "updated": "A StockCategory is updated with identifier {{ param }}",
+            "deleted": "A StockCategory is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete StockCategory {{ id }}?"
+            },
+            "detail": {
+                "title": "StockCategory"
+            },
+            "name": "Name"
+        }
+    }
+}

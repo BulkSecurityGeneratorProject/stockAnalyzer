@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="stockanalyzerApp.stockSplit.detail.title">StockSplit</span> {{stockSplit.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockSplit.day">Day</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockSplit.day}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockSplit.splitRatio">SplitRatio</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{stockSplit.splitRatio}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockSplit.stockInfo">stockInfo</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="stockInfo.detail({id:stockSplit.stockInfoId})">{{stockSplit.stockInfoTicker}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="stockanalyzerApp.stockSplit.stockPrice">stockPrice</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="stockPriceDaily.detail({id:stockSplit.stockPriceId})">{{stockSplit.stockPriceDay}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,122 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myStockPriceWeeklyLabel" translate="stockanalyzerApp.stockPriceWeekly.home.createOrEditLabel">Create or edit a StockPriceWeekly</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="stockPriceWeekly.id" readonly>
+        </div>
+        <div class="form-group">
+            <label translate="stockanalyzerApp.stockPriceWeekly.day" for="field_day">Day</label>
+            <input type="number" class="form-control" name="day" id="field_day"
+                    ng-model="stockPriceWeekly.day"
+                    required>
+            <div ng-show="editForm.day.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.day.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.day.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="stockanalyzerApp.stockPriceWeekly.week" for="field_week">Week</label>
+            <input type="number" class="form-control" name="week" id="field_week"
+                    ng-model="stockPriceWeekly.week"
+                    required>
+            <div ng-show="editForm.week.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.week.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.week.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="stockanalyzerApp.stockPriceWeekly.year" for="field_year">Year</label>
+            <input type="number" class="form-control" name="year" id="field_year"
+                    ng-model="stockPriceWeekly.year"
+                    required>
+            <div ng-show="editForm.year.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.year.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.year.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="stockanalyzerApp.stockPriceWeekly.open" for="field_open">Open</label>
+            <input type="number" class="form-control" name="open" id="field_open"
+                    ng-model="stockPriceWeekly.open"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="stockanalyzerApp.stockPriceWeekly.close" for="field_close">Close</label>
+            <input type="number" class="form-control" name="close" id="field_close"
+                    ng-model="stockPriceWeekly.close"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="stockanalyzerApp.stockPriceWeekly.high" for="field_high">High</label>
+            <input type="number" class="form-control" name="high" id="field_high"
+                    ng-model="stockPriceWeekly.high"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="stockanalyzerApp.stockPriceWeekly.low" for="field_low">Low</label>
+            <input type="number" class="form-control" name="low" id="field_low"
+                    ng-model="stockPriceWeekly.low"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="stockanalyzerApp.stockPriceWeekly.totalVolume" for="field_totalVolume">TotalVolume</label>
+            <input type="number" class="form-control" name="totalVolume" id="field_totalVolume"
+                    ng-model="stockPriceWeekly.totalVolume"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="stockanalyzerApp.stockPriceWeekly.adjustedClose" for="field_adjustedClose">AdjustedClose</label>
+            <input type="number" class="form-control" name="adjustedClose" id="field_adjustedClose"
+                    ng-model="stockPriceWeekly.adjustedClose"
+                    >
+        </div>
+        <div class="form-group">
+            <label translate="stockanalyzerApp.stockPriceWeekly.priceChange" for="field_priceChange">PriceChange</label>
+            <input type="number" class="form-control" name="priceChange" id="field_priceChange"
+                    ng-model="stockPriceWeekly.priceChange"
+                    >
+        </div>
+
+        <div class="form-group">
+            <label translate="stockanalyzerApp.stockPriceWeekly.stockInfo" for="field_stockInfo">stockInfo</label>
+            <select class="form-control" id="field_stockInfo" name="stockInfo" ng-model="stockPriceWeekly.stockInfoId" ng-options="stockInfo.id as stockInfo.ticker for stockInfo in stockinfos">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

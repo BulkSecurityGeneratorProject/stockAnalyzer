@@ -1,0 +1,31 @@
+{
+    "stockanalyzerApp": {
+        "stockPriceWeekly" : {
+            "home": {
+                "title": "StockPriceWeeklys",
+                "createLabel": "Create a new StockPriceWeekly",
+                "createOrEditLabel": "Create or edit a StockPriceWeekly"
+            },
+            "created": "A new StockPriceWeekly is created with identifier {{ param }}",
+            "updated": "A StockPriceWeekly is updated with identifier {{ param }}",
+            "deleted": "A StockPriceWeekly is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete StockPriceWeekly {{ id }}?"
+            },
+            "detail": {
+                "title": "StockPriceWeekly"
+            },
+            "day": "Day",
+            "week": "Week",
+            "year": "Year",
+            "open": "Open",
+            "close": "Close",
+            "high": "High",
+            "low": "Low",
+            "totalVolume": "TotalVolume",
+            "adjustedClose": "AdjustedClose",
+            "priceChange": "PriceChange",
+            "stockInfo": "StockInfo"
+        }
+    }
+}

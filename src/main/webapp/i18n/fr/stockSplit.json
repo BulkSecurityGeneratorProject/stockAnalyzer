@@ -1,0 +1,22 @@
+{
+    "stockanalyzerApp": {
+        "stockSplit" : {
+            "home": {
+                "title": "StockSplits",
+                "createLabel": "Créer un nouveau StockSplit",
+                "createOrEditLabel": "Créer ou éditer un StockSplit"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le StockSplit {{ id }} ?"
+            },
+            "detail": {
+                "title": "StockSplit"
+            },
+            "day": "Day",
+            "splitRatio": "SplitRatio",
+            "stockInfo": "StockInfo",
+            "stockPrice": "StockPrice"
+        }
+    }
+}
+

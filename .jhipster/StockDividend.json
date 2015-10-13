@@ -1,0 +1,43 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "stockInfo",
+            "otherEntityName": "stockInfo",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "ticker"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "stockPrice",
+            "otherEntityName": "stockPriceDaily",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "day",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "stockDividend"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "day",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "amount",
+            "fieldType": "Float",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": "0"
+        }
+    ],
+    "changelogDate": "20151013014146",
+    "dto": "mapstruct",
+    "pagination": "pagination"
+}

@@ -1,0 +1,31 @@
+{
+    "stockanalyzerApp": {
+        "stockPriceMonthly" : {
+            "home": {
+                "title": "StockPriceMonthlys",
+                "createLabel": "Create a new StockPriceMonthly",
+                "createOrEditLabel": "Create or edit a StockPriceMonthly"
+            },
+            "created": "A new StockPriceMonthly is created with identifier {{ param }}",
+            "updated": "A StockPriceMonthly is updated with identifier {{ param }}",
+            "deleted": "A StockPriceMonthly is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete StockPriceMonthly {{ id }}?"
+            },
+            "detail": {
+                "title": "StockPriceMonthly"
+            },
+            "day": "Day",
+            "month": "Month",
+            "year": "Year",
+            "open": "Open",
+            "close": "Close",
+            "high": "High",
+            "low": "Low",
+            "totalVolume": "TotalVolume",
+            "adjustedClose": "AdjustedClose",
+            "priceChange": "PriceChange",
+            "stockInfo": "StockInfo"
+        }
+    }
+}

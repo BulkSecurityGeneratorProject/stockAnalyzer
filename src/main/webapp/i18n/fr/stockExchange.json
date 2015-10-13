@@ -1,0 +1,19 @@
+{
+    "stockanalyzerApp": {
+        "stockExchange" : {
+            "home": {
+                "title": "StockExchanges",
+                "createLabel": "Créer un nouveau StockExchange",
+                "createOrEditLabel": "Créer ou éditer un StockExchange"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le StockExchange {{ id }} ?"
+            },
+            "detail": {
+                "title": "StockExchange"
+            },
+            "name": "Name"
+        }
+    }
+}
+

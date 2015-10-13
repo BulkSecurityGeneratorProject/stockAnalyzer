@@ -1,0 +1,75 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "stockInfo",
+            "otherEntityName": "stockInfo",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "ticker"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "day",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "week",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "year",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "open",
+            "fieldType": "Float"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "close",
+            "fieldType": "Float"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "high",
+            "fieldType": "Float"
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "low",
+            "fieldType": "Float"
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "totalVolume",
+            "fieldType": "Long"
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "adjustedClose",
+            "fieldType": "Float"
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "priceChange",
+            "fieldType": "Float"
+        }
+    ],
+    "changelogDate": "20151012245414",
+    "dto": "mapstruct",
+    "pagination": "pagination"
+}

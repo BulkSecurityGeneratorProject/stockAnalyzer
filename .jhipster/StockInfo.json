@@ -1,0 +1,33 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "stockExchange",
+            "otherEntityName": "stockExchange",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "stockCategory",
+            "otherEntityName": "stockCategory",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "ticker",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "companyName",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20151012224642",
+    "dto": "mapstruct",
+    "pagination": "pagination"
+}
